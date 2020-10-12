@@ -1,0 +1,16 @@
+js untuk meghilangkan da menambah class saat scroll jarak 10 pixel
+
+<script>
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(document).scrollTop() &gt; 10) {
+     $(&quot;p&quot;).removeClass(&#39; masukan class pertama yang ingin di hapus &#39;).addClass(&quot; masukan class yang ingin di tambah menggantikan class sebelumnya &quot;);
+      } else { 
+      $(&quot;p&quot;).removeClass(&quot; masukan class yang sebelumya di tambah menggantikan class pertama &quot;).addClass(&#39; masukan class pertama yang di hapus dan di gantian dengan class sebemunya &#39;);
+    }
+  });
+});
+</script>
+
+
+
