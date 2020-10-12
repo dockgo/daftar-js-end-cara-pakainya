@@ -1,0 +1,47 @@
+/* js hide end show chapter manga */
+
+<script>
+var prevScrollpos = window.pageYOffset;
+var prevScrolltop = window.pageYOffset;
+var prevtScrollpos = window.pageYOffset;
+var prevtScrolltop = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+var currentScrollTop = window.pageYOffset;
+var currenttScrollPos = window.pageYOffset;
+var currenttScrollTop = window.pageYOffset;
+  if (prevScrollpos &gt; currentScrollPos) {
+    document.getElementById(&quot; masukan id target atas di sini &quot;).classList.add(&quot; masukan class show atas yang ingin di tambah &quot;); 
+  } else {
+    document.getElementById(&quot; masukan id target atas di sini &quot;).classList.remove(&quot; masukan class show atas yang ingin di tambah &quot;);
+  }
+  prevScrollpos = currentScrollPos;
+  if (currentScrollTop &gt; prevScrolltop) {    
+    document.getElementById(&quot; masukan id target atas di sini &quot;).classList.add(&quot; masukan class hide atas yang ingin di tambah &quot;);
+  } else {  
+    document.getElementById(&quot; masukan id target atas di sini &quot;).classList.remove(&quot; masukan class hide ata yang ingin di tambah &quot;);
+  }
+   prevScrolltop = currentScrollTop ;
+  
+  if (prevtScrollpos &gt; currenttScrollPos) {
+    document.getElementById(&quot; masukan id target bawah di sini &quot;).classList.add(&quot; masukan class show bawah yang ingin di tambah &quot;); 
+  } else {
+    document.getElementById(&quot; masukan id target bawah di sini &quot;).classList.remove(&quot; masukan class show bawah yang ingin di tambah &quot;);
+  }
+  prevtScrollpos = currenttScrollPos;
+  if (currenttScrollTop &gt; prevtScrolltop) {    
+    document.getElementById(&quot; masukan id target bawah di sini &quot;).classList.add(&quot; masukan class bawah yang ingin di tambah &quot;);
+  } else {  
+    document.getElementById(&quot; masukan id target bawah di sini &quot;).classList.remove(&quot; masukan class bawah yang ingin di tambah &quot;);
+  }
+   prevtScrolltop = currenttScrollTop ; 
+}
+</script>
+
+/* cara pakai */
+id atas dan bawah adalah target id yang akan class nya di tambah show atau hide
+show adalah class untuk menampilkan artikel isi/element, yang sering dipakai untuk menggantikan style='display: block;'
+hide adalah class untuk menyembunyikan/ menghilangkan artikel isi/element, yang sering di pakai untuk menggantikan style='display: none'
+class atas dan bawah adalah class yang akan ingin anda tambah dan hapus apa bila anda scroll
+ 
+
