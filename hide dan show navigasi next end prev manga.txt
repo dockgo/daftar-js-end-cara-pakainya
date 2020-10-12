@@ -43,5 +43,41 @@ id atas dan bawah adalah target id yang akan class nya di tambah show atau hide
 show adalah class untuk menampilkan artikel isi/element, yang sering dipakai untuk menggantikan style='display: block;'
 hide adalah class untuk menyembunyikan/ menghilangkan artikel isi/element, yang sering di pakai untuk menggantikan style='display: none'
 class atas dan bawah adalah class yang akan ingin anda tambah dan hapus apa bila anda scroll
+
+/* contoh yang sudah bisa di pakai */
+
+<script>
+var prevScrollpos = window.pageYOffset;
+var prevScrolltop = window.pageYOffset;
+var prevtScrollpos = window.pageYOffset;
+var prevtScrolltop = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+var currentScrollTop = window.pageYOffset;
+var currenttScrollPos = window.pageYOffset;
+var currenttScrollTop = window.pageYOffset;
+  if (prevScrollpos &gt; currentScrollPos) {
+    document.getElementById(&quot;prevendnext-navigasi&quot;).classList.add(&quot;show_nav&quot;); 
+  } else {
+    document.getElementById(&quot;prevendnext-navigasi&quot;).classList.remove(&quot;show_nav&quot;);
+  }
+  prevScrollpos = currentScrollPos;
+  if (currentScrollTop &gt; prevScrolltop) {    document.getElementById(&quot;prevendnext-navigasi&quot;).classList.add(&quot;hide_nav&quot;);
+  } else {  document.getElementById(&quot;prevendnext-navigasi&quot;).classList.remove(&quot;hide_nav&quot;);
+  }
+   prevScrolltop = currentScrollTop ;
+  
+  if (prevtScrollpos &gt; currenttScrollPos) {
+    document.getElementById(&quot;prevendnext-navigasibawah&quot;).classList.add(&quot;show_footer&quot;); 
+  } else {
+    document.getElementById(&quot;prevendnext-navigasibawah&quot;).classList.remove(&quot;show_footer&quot;);
+  }
+  prevtScrollpos = currenttScrollPos;
+  if (currenttScrollTop &gt; prevtScrolltop) {    document.getElementById(&quot;prevendnext-navigasibawah&quot;).classList.add(&quot;hide_footer&quot;);
+  } else {  document.getElementById(&quot;prevendnext-navigasibawah&quot;).classList.remove(&quot;hide_footer&quot;);
+  }
+   prevtScrolltop = currenttScrollTop ; 
+}
+</script>
  
 
